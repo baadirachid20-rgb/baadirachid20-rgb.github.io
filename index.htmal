@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Or d'eau Fragrances</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* الألوان الرئيسية */
+        :root {
+            --primary-blue: #0A1931;
+            --gold: #D4AF37;
+            --white: #FFFFFF;
+        }
+
+        /* رأس الصفحة (Header) */
+        header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: serif;
+            letter-spacing: 2px;
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* القسم الترحيبي (Hero Section) */
+        .hero {
+            background-color: #152D54;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: var(--gold);
+        }
+
+        /* قسم المنتجات (Products) */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--primary-blue);
+            margin-bottom: 40px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        /* مكان للصور - تقدر تبدلهم بالصور الحقيقية من بعد */
+        .product-img-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .product-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .product-price {
+            color: var(--gold);
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--gold);
+            color: var(--primary-blue);
+        }
+
+        /* الفوتر (Footer) */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 5px solid var(--gold);
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Or d'eau <span>FRAGRANCES</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">عطور رجالية</a></li>
+                <li><a href="#">عطور نسائية</a></li>
+                <li><a href="#">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>اكتشف عالم الأناقة والجاذبية</h1>
+        <p>Or d'eau | golden vibes only ✨</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">أكثر العطور مبيعاً</h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img-placeholder">صورة Writer anonymous</div>
+                <div class="product-title">Writer anonymous</div>
+                <div class="product-price">200 DH</div>
+                <button class="btn">أضف إلى السلة</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-placeholder">صورة Art of universe</div>
+                <div class="product-title">Art of universe</div>
+                <div class="product-price">330 DH</div>
+                <button class="btn">أضف إلى السلة</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-placeholder">صورة Asad bourbon</div>
+                <div class="product-title">Asad bourbon</div>
+                <div class="product-price">200 DH</div>
+                <button class="btn">أضف إلى السلة</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-placeholder">صورة Vulcan feu</div>
+                <div class="product-title">Vulcan feu</div>
+                <div class="product-price">325 DH</div>
+                <button class="btn">أضف إلى السلة</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">Or d'eau <span>FRAGRANCES</span></div>
+        <p class="contact-info">مفتوح حالياً 24/24 | للطلب والاستفسار</p>
+        <p>الهاتف: +212 775-754315</p>
+        <a href="https://wa.me/212775754315" class="whatsapp-btn">تواصل معنا عبر واتساب</a>
+        <p style="margin-top: 20px; font-size: 0.9em; color: #aaa;">© 2026 جميع الحقوق محفوظة لـ Or d'eau</p>
+    </footer>
+
+</body>
+</html>
