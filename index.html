@@ -3,392 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Or d'eau Fragrances | عطور فاخرة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>OR D'EAU FRAGRANCES | Luxury in Every Spray</title>
+    <!-- استدعاء خطوط أنيقة -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- استدعاء الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
-            --primary-blue: #0a1930;
             --gold: #c5a059;
-            --light-bg: #f9f9f9;
-            --text-dark: #333;
+            --gold-light: #e8d098;
+            --black: #111111;
+            --dark-gray: #222222;
+            --white: #ffffff;
+            --beige: #f9f6f0;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif;
         }
 
         body {
-            background-color: #fff;
-            color: var(--text-dark);
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--beige);
+            color: var(--black);
+            line-height: 1.6;
         }
 
-        /* Top Bar */
-        .top-bar {
-            background-color: var(--primary-blue);
-            color: var(--gold);
-            padding: 8px 50px;
-            font-size: 14px;
+        /* --- Header / Top Bar --- */
+        .top-badge {
+            background-color: var(--gold-light);
+            color: var(--black);
             text-align: center;
-        }
-
-        /* Header */
-        header {
+            padding: 10px;
+            font-weight: 700;
+            font-size: 14px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 20px 50px;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            gap: 10px;
         }
 
-        .logo-container h1 {
-            color: var(--primary-blue);
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1;
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 5px solid var(--gold);
         }
 
-        .logo-container p {
-            color: var(--primary-blue);
-            font-size: 12px;
+        .hero-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            color: var(--gold);
+            margin-bottom: 10px;
             letter-spacing: 2px;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 16px;
-            padding-bottom: 5px;
-            transition: color 0.3s;
+        .hero-subtitle {
+            font-size: 22px;
+            color: var(--gold-light);
+            margin-bottom: 10px;
         }
 
-        nav ul li a:hover, nav ul li a.active {
-            color: var(--gold);
-            border-bottom: 2px solid var(--gold);
+        .hero-vibes {
+            font-size: 18px;
+            font-style: italic;
+            opacity: 0.9;
         }
 
-        .header-icons {
+        /* --- Trust Box (TI9A FLMNTOJ) --- */
+        .trust-box {
+            background-color: var(--black);
+            color: var(--white);
+            max-width: 400px;
+            margin: -30px auto 40px;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--gold);
             display: flex;
             align-items: center;
+            gap: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .trust-box i {
+            font-size: 40px;
+            color: var(--gold);
+        }
+
+        .trust-box-text h3 {
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .trust-box-text p {
+            font-size: 16px;
+            color: var(--gold-light);
+        }
+
+        /* --- Features Grid --- */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 35px;
+            color: var(--white);
+            background-color: var(--black);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        /* --- Action Footer --- */
+        .action-footer {
+            background-color: var(--white);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid #ddd;
+            margin-top: 40px;
             gap: 20px;
         }
 
-        .header-icons i {
-            font-size: 20px;
-            color: var(--text-dark);
-            cursor: pointer;
+        .footer-brand h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        
+        .footer-brand p {
+            font-size: 14px;
+            color: #666;
         }
 
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
+        .delivery-info {
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: background 0.3s;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1ebc57;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpg') center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero h2 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 25px;
-        }
-
-        .btn-shop {
-            background-color: var(--gold);
-            color: #fff;
-            padding: 12px 35px;
-            text-decoration: none;
-            font-size: 18px;
             font-weight: 700;
-            border-radius: 5px;
-            display: inline-block;
-            transition: background 0.3s;
+            font-size: 16px;
+        }
+
+        .delivery-info i {
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        /* WhatsApp Button */
+        .btn-shop {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--black);
         }
 
         .btn-shop:hover {
-            background-color: #a68444;
-        }
-
-        /* Products Section */
-        .products-section {
-            padding: 80px 50px;
-            background-color: var(--light-bg);
-            text-align: center;
-        }
-
-        .products-section h2 {
-            font-size: 32px;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .products-section h2::after {
-            content: '';
-            width: 50px;
-            height: 3px;
-            background: var(--gold);
-            display: block;
-            margin: 10px auto 0;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
+            background-color: var(--gold);
+            color: var(--black);
             border-color: var(--gold);
         }
 
-        .product-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .product-title {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .product-price {
-            font-size: 20px;
-            color: var(--text-dark);
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .btn-add {
-            display: block;
-            width: 100%;
-            background-color: var(--primary-blue);
-            color: #fff;
-            padding: 12px 0;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-add:hover {
-            background-color: var(--gold);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: #fff;
-            padding: 50px 50px 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo h2 {
-            font-size: 35px;
-            font-weight: 800;
-        }
-
-        .footer-logo p {
-            color: var(--gold);
-            font-size: 12px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links ul li a:hover {
-            color: var(--gold);
-        }
-
-        .footer-contact p {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            font-size: 20px;
-            margin-left: 15px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: var(--gold);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 14px;
-            color: #aaa;
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero-logo { font-size: 40px; }
+            .hero-title { font-size: 26px; }
+            .action-footer { flex-direction: column; text-align: center; }
+            .btn-shop { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">golden vibes only ✨</div>
+    <!-- Top Badge -->
+    <div class="top-badge">
+        <i class="fa-solid fa-check-circle"></i>
+        100% ORIGINAL PRODUCTS
+    </div>
 
-    <header>
-        <div class="logo-container">
-            <h1>OF</h1>
-            <p>Or d'eau FRAGRANCES</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">الرئيسية</a></li>
-                <li><a href="#">العطور</a></li>
-                <li><a href="#">من نحن</a></li>
-                <li><a href="#">اتصل بنا</a></li>
-            </ul>
-        </nav>
-        <div class="header-icons">
-            <i class="fas fa-search"></i>
-            <a href="https://wa.me/212775754315" class="btn-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> تواصل معنا
-            </a>
-        </div>
-    </header>
-
+    <!-- Hero Section -->
     <div class="hero">
-        <div>
-            <h2>عطور عالم - اكتشف عالم الأناقة والجاذبية</h2>
-            <p>عطور فاخرة لكل لحظة</p>
-            <a href="#" class="btn-shop">تسوق الآن</a>
+        <div class="hero-logo">OF</div>
+        <h1 class="hero-title">OR D'EAU FRAGRANCES</h1>
+        <h2 class="hero-subtitle">Luxury in Every Spray.</h2>
+        <p class="hero-vibes">Golden vibes only ✨</p>
+    </div>
+
+    <!-- Trust Box -->
+    <div class="trust-box">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div class="trust-box-text">
+            <h3>TI9A FLMNTOJ</h3>
+            <p>أصلي، مضمون و بجودة عالية</p>
         </div>
     </div>
 
-    <section class="products-section">
-        <h2>أكثر العطور مبيعاً</h2>
-        <div class="products-grid">
-            
-            <div class="product-card">
-                <img src="writer.jpg" alt="Writer Anonymous" class="product-img">
-                <h3 class="product-title">Writer Anonymous (Cyrus Paris)</h3>
-                <p class="product-price">200 درهم</p>
-                <button class="btn-add">أضف إلى السلة</button>
-            </div>
-
-            <div class="product-card">
-                <img src="art-of-universe.jpg" alt="Art of Universe" class="product-img">
-                <h3 class="product-title">Art of Universe (Lattafa)</h3>
-                <p class="product-price">330 درهم</p>
-                <button class="btn-add">أضف إلى السلة</button>
-            </div>
-
-            <div class="product-card">
-                <img src="asad-bourbon.jpg" alt="Asad Bourbon" class="product-img">
-                <h3 class="product-title">Asad Bourbon (Lattafa)</h3>
-                <p class="product-price">200 درهم</p>
-                <button class="btn-add">أضف إلى السلة</button>
-            </div>
-
-            <div class="product-card">
-                <img src="vulcan-feu.jpg" alt="Vulcan Feu" class="product-img">
-                <h3 class="product-title">Vulcan Feu (French Avenue)</h3>
-                <p class="product-price">325 درهم</p>
-                <button class="btn-add">أضف إلى السلة</button>
-            </div>
-
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-item">
+            <i class="fa-solid fa-spray-can-sparkles"></i>
+            <h4>Long Lasting</h4>
+            <p>ثبات طويل</p>
         </div>
-    </section>
+        <div class="feature-item">
+            <i class="fa-solid fa-gem"></i>
+            <h4>Premium Quality</h4>
+            <p>جودة ممتازة</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-box-open"></i>
+            <h4>Luxury Packaging</h4>
+            <p>تغليف فاخر</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-users"></i>
+            <h4>Trusted By Our Clients</h4>
+            <p>موثوق من طرف زبائننا</p>
+        </div>
+    </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>OF</h2>
-                <p>Or d'eau FRAGRANCES</p>
-            </div>
-            <div class="footer-links">
-                <h3>روابط سريعة</h3>
-                <ul>
-                    <li><a href="#">سياسة الخصوصية</a></li>
-                    <li><a href="#">الشحن والتوصيل</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>تواصل معنا</h3>
-                <p><i class="fas fa-phone"></i> +212 775-754315</p>
-                <p><i class="fas fa-envelope"></i> ayoubbaadi22@gmail.com</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
+    <!-- Footer Action Area -->
+    <div class="action-footer">
+        <div class="footer-brand">
+            <h4>OR D'EAU FRAGRANCES</h4>
+            <p>Elite Scent. Limited Stock.</p>
         </div>
-        <div class="copyright">
-            حقوق النشر محفوظة © 2026 Or d'eau fragrances
+        
+        <div class="delivery-info">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Delivery Available<br>In All Morocco 🇲🇦</span>
         </div>
-    </footer>
+
+        <!-- WhatsApp Link (Replace with your actual number format) -->
+        <a href="https://wa.me/212775754315" class="btn-shop" target="_blank">
+            SHOP NOW <i class="fa-solid fa-chevron-right"></i>
+        </a>
+    </div>
 
 </body>
 </html>
