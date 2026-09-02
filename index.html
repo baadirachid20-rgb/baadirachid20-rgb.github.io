@@ -1,433 +1,215 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Or d'eau Fragrances</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Or d'eau Fragrances | عطور فاخرة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #0a1930;
-            --gold: #c5a059;
-            --light-bg: #f9f9f9;
-            --text-dark: #333;
+            --primary: #d4af37;
+            --primary-hover: #b89628;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-light: #f5f5f5;
+            --text-muted: #aaa;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Cairo', sans-serif;
         }
 
         body {
-            background-color: #fff;
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
         }
 
-        /* Top Bar */
-        .top-bar {
-            background-color: var(--primary-blue);
-            color: var(--gold);
-            padding: 5px 50px;
-            font-size: 14px;
-            text-align: left;
-            direction: ltr;
-        }
-
-        /* Header */
         header {
+            background: rgba(18, 18, 18, 0.95);
+            padding: 20px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 50px;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: 1px;
         }
 
-        .logo-container h1 {
-            color: var(--primary-blue);
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1;
-        }
-        .logo-container p {
-            color: var(--primary-blue);
-            font-size: 12px;
-            letter-spacing: 2px;
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, rgba(212,175,55,0.1) 0%, rgba(18,18,18,1) 100%);
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 16px;
-            padding-bottom: 5px;
-        }
-
-        nav ul li a.active {
-            color: var(--gold);
-            border-bottom: 2px solid var(--gold);
-        }
-
-        .header-icons {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .header-icons i {
-            font-size: 20px;
-            color: var(--text-dark);
-            cursor: pointer;
-        }
-
-        .cart-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background-color: var(--primary-blue);
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-        
-        .cart-info {
-            display: flex;
-            flex-direction: column;
-            font-size: 12px;
-            line-height: 1.2;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('hero-image.jpg') center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            padding: 0 50px;
-            position: relative;
-        }
-
-        /* Placeholder style if you don't have the hero image yet */
-        .hero-placeholder {
-            background: linear-gradient(to right, #e6d7b9, #a38145); /* Temporary gradient */
-            height: 400px;
-            display: flex;
-            align-items: center;
-            padding: 0 50px;
-        }
-
-        .hero-content {
-            color: #fff;
-            max-width: 500px;
-        }
-
-        .hero-content h2 {
-            font-size: 40px;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero-content p {
-            font-size: 24px;
-            margin-bottom: 25px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-        .btn-shop {
-            background-color: #fff;
-            color: var(--primary-blue);
-            padding: 12px 30px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 700;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        /* Best Sellers Section */
-        .best-sellers {
-            padding: 60px 50px;
-            background-color: var(--light-bg);
-            text-align: center;
-        }
-
-        .best-sellers h2 {
-            font-size: 32px;
-            color: var(--text-dark);
-            margin-bottom: 40px;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: #fff;
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #333;
             border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-            transition: transform 0.3s ease;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
         }
 
-        .product-card:hover {
+        .card:hover {
             transform: translateY(-5px);
-            border-color: var(--gold);
+            border-color: var(--primary);
         }
 
-        .product-img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
+        .card h3 {
+            font-size: 22px;
             margin-bottom: 15px;
+            color: var(--text-light);
         }
 
-        .product-title {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            height: 40px; /* To align prices */
-        }
-
-        .product-price {
-            font-size: 20px;
-            color: var(--text-dark);
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .btn-add {
-            display: block;
-            width: 100%;
-            background-color: var(--gold);
-            color: #fff;
-            padding: 12px 0;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .btn-add:hover {
-            background-color: #a68444;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: #fff;
-            padding: 50px 50px 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo h2 {
-            font-size: 40px;
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-        
-        .footer-logo p {
-            color: var(--gold);
-            font-size: 14px;
-        }
-
-        .footer-links h3, .footer-contact h3 {
-            font-size: 20px;
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
             margin-bottom: 20px;
         }
 
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links ul li a {
-            color: #ccc;
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 700;
+            transition: background 0.3s;
         }
 
-        .footer-links ul li a:hover {
-            color: var(--gold);
+        .btn-whatsapp:hover {
+            background-color: #1ebc57;
         }
 
-        .footer-contact p {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            color: #ccc;
-            direction: ltr; /* To keep phone numbers and English text correct */
-            justify-content: flex-end; /* Align right in RTL context */
-        }
-
-        .footer-contact i {
-            color: var(--gold);
-        }
-        
-        .open-status {
-            color: #4CAF50 !important;
-            font-weight: bold;
-        }
-
-        .footer-bottom {
+        .contact-info {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #333;
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #222;
+            color: var(--text-muted);
             font-size: 14px;
-            color: #aaa;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        golden vibes only ✨
-    </div>
-
-    <!-- Header -->
     <header>
-        <div class="logo-container">
-            <h1>OF</h1>
-            <p>Or d'eau</p>
-            <p style="font-size: 8px;">FRAGRANCES</p>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="#" class="active">الرئيسية</a></li>
-                <li><a href="#">عطور نسائية</a></li>
-                <li><a href="#">عطور رجالية</a></li>
-                <li><a href="#">عروض</a></li>
-                <li><a href="#">من نحن</a></li>
-                <li><a href="#">اتصل بنا</a></li>
-            </ul>
-        </nav>
-
-        <div class="header-icons">
-            <i class="fas fa-search"></i>
-            <i class="far fa-user"></i>
-            <a href="#" class="cart-btn">
-                <i class="fas fa-shopping-cart" style="color: var(--gold);"></i>
-                <div class="cart-info">
-                    <span>3 items</span>
-                    <span style="font-weight: bold;">1055 dh</span>
-                </div>
-            </a>
-        </div>
+        <div class="logo">Or d'eau Fragrances</div>
     </header>
 
-    <!-- Hero Section (Change class to "hero" when you have the background image) -->
-    <section class="hero-placeholder">
-        <div class="hero-content">
-            <h2>عطورف عالم - اكتشف عالم الأناقة والجاذبية</h2>
-            <p>عطور فاخرة لكل لحظة</p>
-            <a href="#" class="btn-shop">تسوق الآن</a>
-        </div>
+    <section class="hero">
+        <h1>عطور أور دو الفاخرة</h1>
+        <p>مكونات وزيوت عطرية عالية الجودة، ثبات ممتاز ولمسة أنيقة لكل اللحظات.</p>
     </section>
 
-    <!-- Best Sellers Section -->
-    <section class="best-sellers">
-        <h2>أكثر العطور مبيعاً</h2>
-        
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <!-- بدّل "writer.jpg" بالسمية ديال التصويرة ديالك -->
-                <img src="writer.jpg" alt="Writer Anonymous" class="product-img" style="background-color: #f0f0f0;">
-                <h3 class="product-title">Writer Anonymous (Cyrus Paris)</h3>
-                <p class="product-price">200 dh</p>
-                <button class="btn-add">أضف إلى السلة</button>
+    <div class="container">
+        <h2 class="section-title">تشكيلة العطور المميزة</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>العطر الأول</h3>
+                <p>عطر معتق يمنحك حضوراً قوياً ولا يُنسى طوال اليوم.</p>
+                <a href="https://wa.me/212775754315?text=سلام،%20بغيت%20نطلب%20العطر%20الأول" class="btn-whatsapp" target="_blank">طلب عبر الواتساب</a>
             </div>
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="art-of-universe.jpg" alt="Art of Universe" class="product-img" style="background-color: #f0f0f0;">
-                <h3 class="product-title">Art of Universe (Lattafa)</h3>
-                <p class="product-price">330 dh</p>
-                <button class="btn-add">أضف إلى السلة</button>
+            <div class="card">
+                <h3>العطر الثاني</h3>
+                <p>مزيج شرقي عسلي يجمع بين الثبات والأناقة الفاخرة.</p>
+                <a href="https://wa.me/212775754315?text=سلام،%20بغيت%20نطلب%20العطر%20الثاني" class="btn-whatsapp" target="_blank">طلب عبر الواتساب</a>
             </div>
 
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="asad-bourbon.jpg" alt="Asad Bourbon" class="product-img" style="background-color: #f0f0f0;">
-                <h3 class="product-title">Asad Bourbon (Lattafa)</h3>
-                <p class="product-price">200 dh</p>
-                <button class="btn-add">أضف إلى السلة</button>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="vulcan-feu.jpg" alt="Vulcan Feu" class="product-img" style="background-color: #f0f0f0;">
-                <h3 class="product-title">Vulcan Feu (French Avenue)</h3>
-                <p class="product-price">325 dh</p>
-                <button class="btn-add">أضف إلى السلة</button>
+            <div class="card">
+                <h3>العطر الثالث</h3>
+                <p>عطر منعش يصفي الذهن، يدوم طويلاً ومناسب لجميع المناسبات.</p>
+                <a href="https://wa.me/212775754315?text=سلام،%20بغيت%20نطلب%20العطر%20الثالث" class="btn-whatsapp" target="_blank">طلب عبر الواتساب</a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
+        <div class="contact-info">
+            <h2 class="section-title" style="margin-bottom: 20px;">تواصل معنا</h2>
+            <p><strong>الهاتف والواتساب:</strong> <a href="https://wa.me/212775754315" target="_blank">0775-754315</a></p>
+            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:ayoubbaadi22@gmail.com">ayoubbaadi22@gmail.com</a></p>
+            <p><strong>الموقع:</strong> المغرب</p>
+        </div>
+    </div>
+
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>OF</h2>
-                <h3>Or d'eau</h3>
-                <p style="font-size: 10px; margin-bottom: 15px;">FRAGRANCES</p>
-                <p>golden vibes only ✨</p>
-            </div>
-
-            <div class="footer-links">
-                <h3>روابط سريعة</h3>
-                <ul>
-                    <li><a href="#">سياسة الخصوصية</a></li>
-                    <li><a href="#">الشحن والتوصيل</a></li>
-                    <li><a href="#">المدونة</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h3>تواصل معنا</h3>
-                <p>+212 775-754315 <i class="fab fa-whatsapp"></i></p>
-                <p>ord'eau-fragrances.com <i class="far fa-envelope"></i></p>
-                <p>Estamo Address in Ina:liana, Casablanca <i class="fas fa-map-marker-alt"></i></p>
-                <p class="open-status">مفتوح حالياً 24/24 ✨ <i class="far fa-clock"></i></p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            حقوق النشر محفوظة © Or d'eau fragrances | عرض الكود على Or_deau_GitHub
-        </div>
+        <p>جميع الحقوق محفوظة &copy; 2026 Or d'eau Fragrances</p>
     </footer>
 
 </body>
